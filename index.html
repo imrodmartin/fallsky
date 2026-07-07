@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Home - Fallsky Weather</title>
+  <meta name="description" content="Severe weather for Southeast Indiana - Ripley County, Milan, Osgood, Versailles, Sunman, New Marion, Batesville, Holton and Dillsboro">
+  <meta name="rights" content="Town of Osgood, Indiana">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WE79SK23SX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WE79SK23SX');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Anton&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <ul class="topbar__contact">
+        <li><span class="ico">&#9742;</span> <a href="tel:812.689.4240">812.689.4240</a></li>
+        <li><span class="ico">&#9993;</span> <a href="mailto:info@townofosgood.com">info@townofosgood.com</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="https://fallsky.com/"><img src="images/logo.png" alt="Fallsky Weather" height="60"></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Main menu: same markup drives desktop mega-menu and mobile off-canvas -->
+      <nav class="main-nav" id="mainNav" aria-label="Main menu">
+        <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
+        <ul class="menu">
+          <li class="menu__item menu__item--has-children">
+            <span class="menu__heading" tabindex="0">Weather Links</span>
+            <ul class="submenu">
+              <li><a href="https://fallsky.com/weather/indiana-radar">Indiana Radar</a></li>
+              <li><a href="https://www.ripleycounty.in.gov/ema/">Ripley County Emergency Management Agency</a></li>
+              <li><a href="http://kamala.cod.edu/svr/" target="_blank" rel="noopener noreferrer">Severe Weather Warnings</a></li>
+              <li><a href="https://www.spc.noaa.gov" target="_blank" rel="noopener noreferrer">Storm Prediction Center</a></li>
+              <li><a href="https://weather.com/maps/currentusweather" target="_blank" rel="noopener noreferrer">U.S. Surface Maps</a></li>
+              <li><a href="https://www.wunderground.com/maps/satellite/regional-visible" target="_blank" rel="noopener noreferrer">U.S. Visible Satellite</a></li>
+              <li><a href="https://www.wunderground.com/maps/satellite/regional-infrared" target="_blank" rel="noopener noreferrer">Infrared Satellite</a></li>
+              <li><a href="https://511in.org/list/weather-stations" target="_blank" rel="noopener noreferrer">Weather Station List</a></li>
+              <li><a href="https://511in.org/list/cameras?searchTerm=versailles&amp;page=1&amp;pageRecordLimit=25">US 50 - Versailles Traffic Cam</a></li>
+              <li><a href="https://511in.org/list/cameras?searchTerm=pentown&amp;page=1&amp;pageRecordLimit=25" target="_blank" rel="noopener noreferrer">I-74 Penntown Traffic Cam</a></li>
+            </ul>
+          </li>
+          <li class="menu__item menu__item--has-children">
+            <span class="menu__heading" tabindex="0">Local Energy Companies</span>
+            <ul class="submenu">
+              <li><a href="http://www.dcremc.com/" target="_blank" rel="noopener noreferrer">Decatur County REMC</a></li>
+              <li><a href="http://www.seiremc.com/" target="_blank" rel="noopener noreferrer">SEI REMC</a></li>
+              <li><a href="https://www.duke-energy.com/outages" target="_blank" rel="noopener noreferrer">Duke Energy Outages</a></li>
+            </ul>
+          </li>
+          <li class="menu__item"><a href="https://www.disasterassistance.gov" target="_blank" rel="noopener noreferrer">Disaster Assistance</a></li>
+          <li class="menu__item"><a href="https://fallsky.com/about-fallsky">About Fallsky Weather</a></li>
+          <li class="menu__item"><a href="http://www.osgoodindiana.org" target="_blank" rel="noopener noreferrer">Town of Osgood</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <main>
+
+    <!-- Hero slideshow -->
+    <section class="hero" id="hero">
+      <div class="hero__slide is-active" style="background-image:url(images/night-sky-hyden-western-australia-sbi-301985269.jpg)"></div>
+      <div class="hero__slide" style="background-image:url(images/thunderbolt-over-cereal-field-at-summer-time-storm-sbi-3008708791.jpg)"></div>
+      <div class="hero__slide" style="background-image:url(images/fall-sky1.jpeg)"></div>
+      <div class="hero__overlay container">
+        <p class="hero__memorial">In honor and memory of David Rayner and Dan Mulford.</p>
+        <h1 class="hero__title">Fallsky Weather</h1>
+        <p class="hero__tagline">Tracking severe weather 24x7x365</p>
+      </div>
+      <div class="hero__dots" id="heroDots" aria-label="Slide controls"></div>
+    </section>
+
+    <!-- Text alerts + doppler legend -->
+    <section class="section">
+      <div class="container split">
+        <div class="split__main">
+          <h2>Sign Up for Text Alerts</h2>
+          <p>Weather Advisories, Watches and Warnings for all Towns &amp; Rural Areas of Ripley County</p>
+          <a class="btn btn--block" href="https://www.osgoodindiana.org/txtwire" target="_blank" rel="noopener noreferrer">
+            &#9993; Yes! I want text alerts from Fall Sky Weather!
+          </a>
+        </div>
+        <div class="split__aside">
+          <h3>Legend for Doppler Radars</h3>
+          <img class="img-responsive" src="images/legend.gif" alt="Legend for Doppler Radars" width="321" height="117">
+        </div>
+      </div>
+    </section>
+
+    <!-- AccuWeather mosaic + Indiana map CTA -->
+    <section class="section section--muted">
+      <div class="container split split--wide-left">
+        <div class="split__main">
+          <iframe class="embed embed--mosaic" src="https://sirocco.accuweather.com/nx_mosaic_640x480_public/sir/inmasirin_.gif" title="AccuWeather Indiana mosaic" loading="lazy"></iframe>
+        </div>
+        <div class="split__aside">
+          <h3>Indiana Weather Map</h3>
+          <p class="small">On mobile swipe left or right to move the map. (Refresh page to update)</p>
+          <p>To view the <strong>most current</strong> weather, click on the button below. The map will refresh itself every 5 minutes.</p>
+          <a class="btn" href="https://fallsky.com/weather/indiana-radar">View the most current Indiana weather</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weather widgets (weatherwidget.io) -->
+    <section class="section">
+      <div class="container card-grid card-grid--4">
+        <div class="widget-cell">
+          <a class="weatherwidget-io" href="https://forecast7.com/en/39d13n85d29/osgood/?unit=us" data-label_1="OSGOOD" data-label_2="WEATHER" data-days="5" data-theme="original">OSGOOD WEATHER</a>
+        </div>
+        <div class="widget-cell">
+          <a class="weatherwidget-io" href="https://forecast7.com/en/39d10n84d51/cincinnati/?unit=us" data-label_1="CINCINNATI" data-label_2="WEATHER" data-days="5" data-theme="dark">CINCINNATI WEATHER</a>
+        </div>
+        <div class="widget-cell">
+          <a class="weatherwidget-io" href="https://forecast7.com/en/38d25n85d76/louisville/?unit=us" data-label_1="LOUISVILLE" data-label_2="WEATHER" data-days="5" data-theme="orange">LOUISVILLE WEATHER</a>
+        </div>
+        <div class="widget-cell">
+          <a class="weatherwidget-io" href="https://forecast7.com/en/39d77n86d16/indianapolis/?unit=us" data-label_1="INDIANAPOLIS" data-label_2="WEATHER" data-days="5" data-theme="beige">INDIANAPOLIS WEATHER</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Indiana travel status card -->
+    <section class="section section--muted">
+      <div class="container split split--wide-right">
+        <div class="split__aside">
+          <a href="https://www.in.gov/dhs/traveladvisory/" target="_blank" rel="noopener noreferrer">
+            <img class="img-responsive" src="images/ripleyyellow.gif" alt="State of Indiana travel status" width="150" height="230">
+          </a>
+        </div>
+        <div class="split__main">
+          <h3>Travel Status - All Indiana Counties</h3>
+          <p>NOTICE: Travel Status information is provided by each County's Emergency Management Agency. As counties initiate official travel advisories and notify the state, the map automatically updates with that information.</p>
+          <a class="btn" href="https://www.in.gov/dhs/traveladvisory/" target="_blank" rel="noopener noreferrer">See what's going on</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPC mesoanalysis loop -->
+    <section class="section">
+      <div class="container">
+        <img class="img-responsive" id="spcLoop" data-src="https://www.spc.noaa.gov/products/activity_loop.gif" alt="SPC mesoanalysis activity loop" style="width:100%">
+      </div>
+    </section>
+
+    <!-- NWS live radar -->
+    <section class="section section--muted">
+      <div class="container">
+        <iframe class="embed embed--radar" src="https://radar.weather.gov/?settings=v1_eyJhZ2VuZGEiOnsiaWQiOiJuYXRpb25hbCIsImNlbnRlciI6Wy05NS4wMSwzNi45ODVdLCJsb2NhdGlvbiI6bnVsbCwiem9vbSI6NSwibGF5ZXIiOiJicmVmX3FjZCJ9LCJhbmltYXRpbmciOmZhbHNlLCJiYXNlIjoic3RhbmRhcmQiLCJhcnRjYyI6ZmFsc2UsImNvdW50eSI6ZmFsc2UsImN3YSI6ZmFsc2UsInJmYyI6ZmFsc2UsInN0YXRlIjpmYWxzZSwibWVudSI6dHJ1ZSwic2hvcnRGdXNlZE9ubHkiOmZhbHNlLCJvcGFjaXR5Ijp7ImFsZXJ0cyI6MC44LCJsb2NhbCI6MC42LCJsb2NhbFN0YXRpb25zIjowLjgsIm5hdGlvbmFsIjowLjZ9fQ%3D%3D" title="NWS live radar" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <!-- SPC outlook trio -->
+    <section class="section">
+      <div class="container card-grid card-grid--3">
+        <div class="card card--plain">
+          <h3>SPC One Day Outlook</h3>
+          <a href="http://www.spc.noaa.gov/products/outlook/day1otlk.html" target="_blank" rel="noopener noreferrer">
+            <img class="img-responsive" src="images/day1otlk_sm.gif" alt="SPC One Day Outlook">
+          </a>
+        </div>
+        <div class="card card--plain">
+          <h3>SPC Two Day Outlook</h3>
+          <a href="http://www.spc.noaa.gov/products/outlook/day2otlk.html" target="_blank" rel="noopener noreferrer">
+            <img class="img-responsive" src="images/day2otlk_sm.gif" alt="SPC Two Day Outlook">
+          </a>
+        </div>
+        <div class="card card--plain">
+          <h3>Severe Storm Watches</h3>
+          <a href="http://www.spc.noaa.gov/products/watch/" target="_blank" rel="noopener noreferrer">
+            <img class="img-responsive" src="images/validww_sm.png" alt="Severe Storm Watches">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Severe weather image trio -->
+    <section class="section section--muted">
+      <div class="container card-grid card-grid--3">
+        <figure class="card">
+          <h3>Severe Weather Warnings</h3>
+          <a href="https://kamala.cod.edu/svr/" target="_blank" rel="noopener noreferrer">
+            <img class="img-responsive" src="images/img_2123.jpg" alt="Severe Weather Warnings">
+          </a>
+        </figure>
+        <figure class="card">
+          <h3>USA Visible Satellite</h3>
+          <a href="https://www.wunderground.com/maps/satellite/regional-visible" target="_blank" rel="noopener noreferrer">
+            <img class="img-responsive" src="images/2023-08-19_16-17-37.png" alt="USA Visible Satellite">
+          </a>
+        </figure>
+        <figure class="card">
+          <h3>USA Infrared Satellite</h3>
+          <a href="https://www.wunderground.com/maps/satellite/regional-infrared" target="_blank" rel="noopener noreferrer">
+            <img class="img-responsive" src="images/2023-08-19_16-18-30.png" alt="USA Infrared Satellite">
+          </a>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SPC / surface / disaster trio -->
+    <section class="section">
+      <div class="container card-grid card-grid--3">
+        <figure class="card">
+          <h3>Storm Prediction Center</h3>
+          <a href="http://www.spc.noaa.gov/" target="_blank" rel="noopener noreferrer">
+            <img class="img-responsive" src="images/road-leading-into-a-desert-storm-sbi-326469100.jpg" alt="Storm Prediction Center">
+          </a>
+        </figure>
+        <figure class="card">
+          <h3>USA Surface Maps</h3>
+          <a href="https://weather.com/maps/currentusweather" target="_blank" rel="noopener noreferrer">
+            <img class="img-responsive" src="images/2023-08-19_16-54-48.png" alt="USA Surface Maps">
+          </a>
+        </figure>
+        <figure class="card">
+          <h3>Disaster Assistance</h3>
+          <a href="https://www.disasterassistance.gov/" target="_blank" rel="noopener noreferrer">
+            <img class="img-responsive" src="images/tree-down-in-wind-damage-sbi-301087381.jpg" alt="Disaster Assistance">
+          </a>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Local Energy Companies -->
+    <section class="section section--muted">
+      <div class="container">
+        <h2 class="section__title">Local Energy Companies</h2>
+        <div class="card-grid card-grid--3">
+          <figure class="card">
+            <h3>Decatur County REMC</h3>
+            <a href="http://www.dcremc.com/" target="_blank" rel="noopener noreferrer">
+              <img class="img-responsive" src="images/2023-08-19_16-24-44.png" alt="Decatur County REMC">
+            </a>
+          </figure>
+          <figure class="card">
+            <h3>SEI REMC</h3>
+            <a href="http://www.seiremc.com/" target="_blank" rel="noopener noreferrer">
+              <img class="img-responsive" src="images/2023-08-19_16-24-04.png" alt="SEI REMC">
+            </a>
+          </figure>
+          <figure class="card">
+            <h3>Duke Energy Outages</h3>
+            <a href="https://www.duke-energy.com/outages" target="_blank" rel="noopener noreferrer">
+              <img class="img-responsive" src="images/2023-08-19_16-23-111.png" alt="Duke Energy Outages">
+            </a>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 FallSky.com. Design and Hosting by <a href="https://navigatetomorrow.com">NavigateTomorrow</a></p>
+      <p><strong>DO NOT</strong> use these warnings as your basis for life or death information. This site is for information &amp; entertainment purposes only. <strong>Your local National Weather Service office is where you should get your important severe weather information.</strong></p>
+      <p>Fallsky Weather, the Town of Osgood and NavigateTomorrow are not your source for emergency information.</p>
+    </div>
+  </footer>
+
+  <button class="scroll-up" id="scrollUp" aria-label="Scroll to top">&#8679;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
