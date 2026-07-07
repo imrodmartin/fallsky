@@ -156,6 +156,22 @@ h3 { font-size: 1.35rem; margin: 0 0 .5em; }
 .site-footer a { color: var(--white); text-decoration: underline; }
 .site-footer p { margin: .5rem 0; }
 
+/* ---------- Prose / About page ---------- */
+.prose { max-width: 900px; }
+.prose__title { font-size: 2.6rem; margin: 0 0 .4rem; }
+.prose__rule { border: 0; border-top: 1px solid var(--line); margin: 0 0 1.6rem; }
+.prose__subhead { margin-top: 1.6rem; }
+.prose p { margin: 0 0 1.2rem; }
+.prose__figure {
+  float: right; width: 360px; max-width: 45%;
+  margin: 0 0 1rem 1.6rem; border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.15);
+}
+@media (max-width: 600px) {
+  .prose__figure { float: none; width: 100%; max-width: 100%; margin: 0 0 1.2rem; }
+  .prose__title { font-size: 2rem; }
+}
+
 /* scroll-up */
 .scroll-up {
   position: fixed; right: 20px; bottom: 20px; z-index: 90;
