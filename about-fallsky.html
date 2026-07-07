@@ -73,9 +73,11 @@
           <li class="menu__item"><a href="http://www.osgoodindiana.org" target="_blank" rel="noopener noreferrer">Town of Osgood</a></li>
         </ul>
       </nav>
+      <!-- Backdrop lives inside the header so it shares the nav's stacking context
+           (iOS Safari mis-layers a fixed backdrop that sits outside the sticky header). -->
+      <div class="nav-backdrop" id="navBackdrop"></div>
     </div>
   </header>
-  <div class="nav-backdrop" id="navBackdrop"></div>
 
   <main class="section">
     <article class="container prose">
