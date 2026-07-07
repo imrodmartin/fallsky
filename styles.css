@@ -46,7 +46,7 @@ h3 { font-size: 1.35rem; margin: 0 0 .5em; }
 
 /* ---------- Header / nav ---------- */
 .site-header {
-  position: sticky; top: 0; z-index: 100;
+  position: sticky; top: 0; z-index: 115;
   background: var(--white);
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
