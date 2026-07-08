@@ -97,6 +97,15 @@
     setInterval(refreshSpc, 5 * 60 * 1000); // every 5 min
   }
 
+  /* ---------- AccuWeather mosaic iframe: load + refresh every 5 min ---------- */
+  var mosaic = document.getElementById('mosaicFrame');
+  if (mosaic) {
+    var mosaicUrl = mosaic.getAttribute('data-src');
+    function refreshMosaic() { mosaic.src = mosaicUrl + '?t=' + Date.now(); }
+    refreshMosaic();
+    setInterval(refreshMosaic, 5 * 60 * 1000);
+  }
+
   /* ---------- Scroll-to-top ---------- */
   var up = document.getElementById('scrollUp');
   if (up) {
